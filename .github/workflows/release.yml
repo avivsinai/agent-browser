@@ -256,7 +256,14 @@ jobs:
           echo "All 7 platform binaries present and valid"
 
       - name: Publish to npm
-        run: npm publish --provenance
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "agent-browser@$VERSION" version >/dev/null 2>&1; then
+            echo "agent-browser@$VERSION is already published; skipping npm publish"
+            exit 0
+          fi
+
+          npm publish --provenance
 
   github-release:
     name: Create GitHub Release
