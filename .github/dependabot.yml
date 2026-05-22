@@ -1,0 +1,106 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    assignees:
+      - "avivsinai"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 7
+
+  - package-ecosystem: "npm"
+    directory: "/benchmarks"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    assignees:
+      - "avivsinai"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+
+  - package-ecosystem: "npm"
+    directory: "/docs"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    assignees:
+      - "avivsinai"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+
+  - package-ecosystem: "npm"
+    directory: "/evals"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    assignees:
+      - "avivsinai"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+
+  - package-ecosystem: "npm"
+    directory: "/examples/environments"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    assignees:
+      - "avivsinai"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+
+  - package-ecosystem: "npm"
+    directory: "/packages/dashboard"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    assignees:
+      - "avivsinai"
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+
+  - package-ecosystem: "cargo"
+    directory: "/cli"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    assignees:
+      - "avivsinai"
+    groups:
+      cargo-dependencies:
+        patterns:
+          - "*"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+
